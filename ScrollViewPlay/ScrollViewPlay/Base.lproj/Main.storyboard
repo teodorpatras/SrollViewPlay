@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FDI-uV-5MA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="YRs-Xb-edk">
+            <objects>
+                <tableViewController id="2bw-qE-kue" customClass="TableViewController" customModule="ScrollViewPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="O28-5m-0TR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="G63-9I-edW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G63-9I-edW" id="Vna-Zc-kh5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2bw-qE-kue" id="1cd-0w-R73"/>
+                            <outlet property="delegate" destination="2bw-qE-kue" id="eyK-gP-loj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OJ4-KK-hNs"/>
+                    <connections>
+                        <segue destination="clg-8x-YWk" kind="show" identifier="showHeaderZoomController" id="NqZ-IC-eXn"/>
+                        <segue destination="NAv-yr-mdv" kind="show" identifier="showInfiniteScrollView" id="M1j-38-FXA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uN2-sM-r1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="1108"/>
+        </scene>
+        <!--Header Zoom View Controller-->
+        <scene sceneID="c3y-i3-5Km">
+            <objects>
+                <viewController id="clg-8x-YWk" customClass="HeaderZoomViewController" customModule="ScrollViewPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HQU-er-Fhi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pmd-mS-IxK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WoU-a7-TAC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ET6-nq-cT1" customClass="HeaderZoomScrollView" customModule="ScrollViewPlay">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ET6-nq-cT1" secondAttribute="trailing" id="B0E-Nr-XpV"/>
+                            <constraint firstItem="ET6-nq-cT1" firstAttribute="leading" secondItem="WoU-a7-TAC" secondAttribute="leading" id="UTx-gF-XFk"/>
+                            <constraint firstItem="Pmd-mS-IxK" firstAttribute="top" secondItem="ET6-nq-cT1" secondAttribute="bottom" id="Zzf-YP-3cP"/>
+                            <constraint firstItem="ET6-nq-cT1" firstAttribute="top" secondItem="HQU-er-Fhi" secondAttribute="bottom" id="lYb-9k-rQb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ET6-nq-cT1" id="Edx-Mh-Bu1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhY-ha-9iZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704" y="679"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="utE-aC-OdQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FDI-uV-5MA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rB5-6Q-eka">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2bw-qE-kue" kind="relationship" relationship="rootViewController" id="I99-41-kkn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKZ-lg-hEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="1126"/>
+        </scene>
+        <!--Infinite Scroll View Controller-->
+        <scene sceneID="BSk-oP-XgF">
+            <objects>
+                <viewController id="NAv-yr-mdv" customClass="InfiniteScrollViewController" customModule="ScrollViewPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a4H-1L-Mpp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Knc-En-1ZI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPU-vv-tpb">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bd8-KJ-k2g" customClass="InfiniteScrollView" customModule="ScrollViewPlay">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bd8-KJ-k2g" firstAttribute="top" secondItem="a4H-1L-Mpp" secondAttribute="bottom" id="3wO-No-gBE"/>
+                            <constraint firstItem="Bd8-KJ-k2g" firstAttribute="leading" secondItem="oPU-vv-tpb" secondAttribute="leading" id="7XP-jc-fuw"/>
+                            <constraint firstAttribute="trailing" secondItem="Bd8-KJ-k2g" secondAttribute="trailing" id="ZIR-ky-QV9"/>
+                            <constraint firstItem="Knc-En-1ZI" firstAttribute="top" secondItem="Bd8-KJ-k2g" secondAttribute="bottom" id="hhe-Er-kKL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fF-gX-3Xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725" y="1436"/>
+        </scene>
+    </scenes>
+</document>
