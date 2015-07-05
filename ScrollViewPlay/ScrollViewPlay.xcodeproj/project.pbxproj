@@ -19,6 +19,10 @@
 		E8C1B5AF1B457487004C787B /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1B5AE1B457487004C787B /* InfiniteScrollView.swift */; };
 		E8C1B5B11B457CB7004C787B /* InfiniteScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1B5B01B457CB7004C787B /* InfiniteScrollViewController.swift */; };
 		E8D8C6C31B495A020023884D /* DynamicCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8C6C21B495A020023884D /* DynamicCollectionLayout.swift */; };
+		E8D8C6C51B49AC290023884D /* ScrollTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8C6C41B49AC290023884D /* ScrollTouchViewController.swift */; };
+		E8D8C6C71B49AC390023884D /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8C6C61B49AC390023884D /* DotView.swift */; };
+		E8D8C6C91B49B9A20023884D /* OverlayScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8C6C81B49B9A20023884D /* OverlayScrollView.swift */; };
+		E8D8C6CB1B49C3960023884D /* TouchDelayRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8C6CA1B49C3960023884D /* TouchDelayRecognizer.swift */; };
 		E8F1C11D1B492BB70074B1B8 /* ScrollableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F1C11C1B492BB70074B1B8 /* ScrollableCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,11 @@
 		E8C1B5AE1B457487004C787B /* InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		E8C1B5B01B457CB7004C787B /* InfiniteScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollViewController.swift; sourceTree = "<group>"; };
 		E8D8C6C21B495A020023884D /* DynamicCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCollectionLayout.swift; sourceTree = "<group>"; };
+		E8D8C6C41B49AC290023884D /* ScrollTouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTouchViewController.swift; sourceTree = "<group>"; };
+		E8D8C6C61B49AC390023884D /* DotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		E8D8C6C81B49B9A20023884D /* OverlayScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayScrollView.swift; sourceTree = "<group>"; };
+		E8D8C6CA1B49C3960023884D /* TouchDelayRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDelayRecognizer.swift; sourceTree = "<group>"; };
+		E8D8C6CE1B49CCDE0023884D /* ScrollViewPlay-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ScrollViewPlay-BridgingHeader.h"; sourceTree = "<group>"; };
 		E8F1C11C1B492BB70074B1B8 /* ScrollableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +100,7 @@
 		E8C1B5801B454323004C787B /* ScrollViewPlay */ = {
 			isa = PBXGroup;
 			children = (
+				E8D8C6CE1B49CCDE0023884D /* ScrollViewPlay-BridgingHeader.h */,
 				E8C1B5A71B45437F004C787B /* Controller */,
 				E8C1B5A61B45437B004C787B /* View */,
 				E8C1B5A51B454372004C787B /* Model */,
@@ -129,6 +139,7 @@
 			children = (
 				E8C1B5831B454323004C787B /* AppDelegate.swift */,
 				E8D8C6C21B495A020023884D /* DynamicCollectionLayout.swift */,
+				E8D8C6CA1B49C3960023884D /* TouchDelayRecognizer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 		E8C1B5A61B45437B004C787B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8D8C6C61B49AC390023884D /* DotView.swift */,
 				E8F1C11B1B492B960074B1B8 /* Custom Cells */,
 				E8C1B5AB1B4546C0004C787B /* Custom UIScrollviews */,
 				E8C1B58C1B454323004C787B /* LaunchScreen.xib */,
@@ -152,6 +164,7 @@
 				E8C1B5A91B454576004C787B /* HeaderZoomViewController.swift */,
 				E8C1B5B01B457CB7004C787B /* InfiniteScrollViewController.swift */,
 				E8717A8E1B492D2B006DC5EF /* NestedScrollViewController.swift */,
+				E8D8C6C41B49AC290023884D /* ScrollTouchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 			children = (
 				E8C1B5AC1B4546FB004C787B /* HeaderZoomScrollView.swift */,
 				E8C1B5AE1B457487004C787B /* InfiniteScrollView.swift */,
+				E8D8C6C81B49B9A20023884D /* OverlayScrollView.swift */,
 			);
 			name = "Custom UIScrollviews";
 			sourceTree = "<group>";
@@ -273,11 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D8C6CB1B49C3960023884D /* TouchDelayRecognizer.swift in Sources */,
 				E8717A8F1B492D2B006DC5EF /* NestedScrollViewController.swift in Sources */,
 				E8C1B5AA1B454576004C787B /* HeaderZoomViewController.swift in Sources */,
 				E8C1B5AD1B4546FB004C787B /* HeaderZoomScrollView.swift in Sources */,
 				E8C1B5AF1B457487004C787B /* InfiniteScrollView.swift in Sources */,
 				E8C1B5B11B457CB7004C787B /* InfiniteScrollViewController.swift in Sources */,
+				E8D8C6C71B49AC390023884D /* DotView.swift in Sources */,
+				E8D8C6C91B49B9A20023884D /* OverlayScrollView.swift in Sources */,
+				E8D8C6C51B49AC290023884D /* ScrollTouchViewController.swift in Sources */,
 				E8D8C6C31B495A020023884D /* DynamicCollectionLayout.swift in Sources */,
 				E8C1B5841B454323004C787B /* AppDelegate.swift in Sources */,
 				E8F1C11D1B492BB70074B1B8 /* ScrollableCell.swift in Sources */,
@@ -414,6 +432,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScrollViewPlay-BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -425,6 +444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScrollViewPlay-BridgingHeader.h";
 			};
 			name = Release;
 		};

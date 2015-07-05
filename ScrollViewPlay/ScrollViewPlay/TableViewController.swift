@@ -14,7 +14,7 @@ func statusAndNavigationBarHeights(controller : UINavigationController) -> CGFlo
 
 class TableViewController: UITableViewController {
 
-    let dataSource = [["title" : "Infinite scrolling", "segue" : "showInfiniteScrollView"],["title" : "Header View & Zooming", "segue" : "showHeaderZoomScrollView"], ["title" : "Nested scroll views", "segue" : "showNestedScrollViews"]]
+    let dataSource = [["title" : "Infinite scrolling", "segue" : "showInfiniteScrollView"],["title" : "Header View & Zooming", "segue" : "showHeaderZoomScrollView"], ["title" : "Nested scroll views", "segue" : "showNestedScrollViews"], ["title" : "Scroll view touch handling", "segue" : "showScrollTouchController"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

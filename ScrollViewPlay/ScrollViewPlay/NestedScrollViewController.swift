@@ -77,18 +77,16 @@ class NestedScrollViewController: UIViewController, UICollectionViewDataSource, 
     func scrollableCellDidEndPulling(cell: ScrollableCell) {
         self.scrollView.scrollEnabled = true
     }
+}
+
+func randomColor() -> UIColor{
     
-    // MARK:- Helpers -
+    var randomRed:CGFloat = CGFloat(drand48())
     
-    func randomColor() -> UIColor{
-        
-        var randomRed:CGFloat = CGFloat(drand48())
-        
-        var randomGreen:CGFloat = CGFloat(drand48())
-        
-        var randomBlue:CGFloat = CGFloat(drand48())
-        
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-        
-    }
+    var randomGreen:CGFloat = CGFloat(drand48())
+    
+    var randomBlue:CGFloat = CGFloat(drand48())
+    
+    return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+    
 }

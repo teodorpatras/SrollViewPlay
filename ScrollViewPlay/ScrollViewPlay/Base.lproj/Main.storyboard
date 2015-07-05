@@ -30,6 +30,7 @@
                         <segue destination="clg-8x-YWk" kind="show" identifier="showHeaderZoomScrollView" id="NqZ-IC-eXn"/>
                         <segue destination="NAv-yr-mdv" kind="show" identifier="showInfiniteScrollView" id="M1j-38-FXA"/>
                         <segue destination="jIv-F5-z4Y" kind="show" identifier="showNestedScrollViews" id="Ref-HE-h3U"/>
+                        <segue destination="Khk-hi-RDO" kind="show" identifier="showScrollTouchController" id="81J-mp-qcv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uN2-sM-r1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,6 +187,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fF-gX-3Xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2725" y="1436"/>
+        </scene>
+        <!--Scroll Touch View Controller-->
+        <scene sceneID="1F9-1I-YT7">
+            <objects>
+                <viewController id="Khk-hi-RDO" customClass="ScrollTouchViewController" customModule="ScrollViewPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qWr-2z-HLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="O7h-aw-tAR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9c-rU-VWu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7j-oI-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2722" y="2229"/>
         </scene>
     </scenes>
 </document>
