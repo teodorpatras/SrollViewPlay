@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8717A8F1B492D2B006DC5EF /* NestedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8717A8E1B492D2B006DC5EF /* NestedScrollViewController.swift */; };
 		E8C1B5841B454323004C787B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1B5831B454323004C787B /* AppDelegate.swift */; };
 		E8C1B5891B454323004C787B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C1B5871B454323004C787B /* Main.storyboard */; };
 		E8C1B58B1B454323004C787B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C1B58A1B454323004C787B /* Images.xcassets */; };
@@ -17,6 +18,8 @@
 		E8C1B5AD1B4546FB004C787B /* HeaderZoomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1B5AC1B4546FB004C787B /* HeaderZoomScrollView.swift */; };
 		E8C1B5AF1B457487004C787B /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1B5AE1B457487004C787B /* InfiniteScrollView.swift */; };
 		E8C1B5B11B457CB7004C787B /* InfiniteScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1B5B01B457CB7004C787B /* InfiniteScrollViewController.swift */; };
+		E8D8C6C31B495A020023884D /* DynamicCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8C6C21B495A020023884D /* DynamicCollectionLayout.swift */; };
+		E8F1C11D1B492BB70074B1B8 /* ScrollableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F1C11C1B492BB70074B1B8 /* ScrollableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8717A8E1B492D2B006DC5EF /* NestedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedScrollViewController.swift; sourceTree = "<group>"; };
 		E8C1B57E1B454323004C787B /* ScrollViewPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C1B5821B454323004C787B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C1B5831B454323004C787B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		E8C1B5AC1B4546FB004C787B /* HeaderZoomScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderZoomScrollView.swift; sourceTree = "<group>"; };
 		E8C1B5AE1B457487004C787B /* InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		E8C1B5B01B457CB7004C787B /* InfiniteScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollViewController.swift; sourceTree = "<group>"; };
+		E8D8C6C21B495A020023884D /* DynamicCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCollectionLayout.swift; sourceTree = "<group>"; };
+		E8F1C11C1B492BB70074B1B8 /* ScrollableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E8C1B5831B454323004C787B /* AppDelegate.swift */,
+				E8D8C6C21B495A020023884D /* DynamicCollectionLayout.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 		E8C1B5A61B45437B004C787B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8F1C11B1B492B960074B1B8 /* Custom Cells */,
 				E8C1B5AB1B4546C0004C787B /* Custom UIScrollviews */,
 				E8C1B58C1B454323004C787B /* LaunchScreen.xib */,
 				E8C1B58A1B454323004C787B /* Images.xcassets */,
@@ -143,6 +151,7 @@
 				E8C1B5A31B45436D004C787B /* TableViewController.swift */,
 				E8C1B5A91B454576004C787B /* HeaderZoomViewController.swift */,
 				E8C1B5B01B457CB7004C787B /* InfiniteScrollViewController.swift */,
+				E8717A8E1B492D2B006DC5EF /* NestedScrollViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,6 +163,14 @@
 				E8C1B5AE1B457487004C787B /* InfiniteScrollView.swift */,
 			);
 			name = "Custom UIScrollviews";
+			sourceTree = "<group>";
+		};
+		E8F1C11B1B492B960074B1B8 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E8F1C11C1B492BB70074B1B8 /* ScrollableCell.swift */,
+			);
+			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,11 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8717A8F1B492D2B006DC5EF /* NestedScrollViewController.swift in Sources */,
 				E8C1B5AA1B454576004C787B /* HeaderZoomViewController.swift in Sources */,
 				E8C1B5AD1B4546FB004C787B /* HeaderZoomScrollView.swift in Sources */,
 				E8C1B5AF1B457487004C787B /* InfiniteScrollView.swift in Sources */,
 				E8C1B5B11B457CB7004C787B /* InfiniteScrollViewController.swift in Sources */,
+				E8D8C6C31B495A020023884D /* DynamicCollectionLayout.swift in Sources */,
 				E8C1B5841B454323004C787B /* AppDelegate.swift in Sources */,
+				E8F1C11D1B492BB70074B1B8 /* ScrollableCell.swift in Sources */,
 				E8C1B5A41B45436D004C787B /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScrollViewPlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScrollViewPlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -459,6 +481,7 @@
 				E8C1B59F1B454323004C787B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8C1B5A01B454323004C787B /* Build configuration list for PBXNativeTarget "ScrollViewPlayTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +490,7 @@
 				E8C1B5A21B454323004C787B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

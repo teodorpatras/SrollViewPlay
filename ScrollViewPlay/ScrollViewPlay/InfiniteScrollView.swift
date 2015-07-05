@@ -24,11 +24,25 @@ class InfiniteScrollView: UIScrollView {
         self.contentSize = CGSizeMake(5000, UIScreen.mainScreen().bounds.height - 128)
         containerView.frame = CGRectMake(0, 0, self.contentSize.width, self.contentSize.height * 0.7)
         self.addSubview(self.containerView)
+
+        var actualSize : CGFloat = 0
+        var imageView : UIImageView
         
         for name in imageNames
         {
-            imageViews.append(UIImageView(image: UIImage(named: name)))
+            imageView = UIImageView(image: UIImage(named: name))
+            actualSize += CGRectGetWidth(imageView.frame)
+            imageViews.append(imageView)
         }
+        
+        /* this should only work if all the images place side by side would
+        not fit within the width of the scroll view */
+        
+        if actualSize <= CGRectGetWidth(self.bounds) {
+            self.scrollEnabled = false
+            self.bounces = false
+        }
+        
     }
     
     // MARK:- Layout -
@@ -69,10 +83,11 @@ class InfiniteScrollView: UIScrollView {
         self.tileFromMinX(minVisX, toMaxX: maxVisX)
     }
     
-    // MARK:- ImageViews Tiling -
+    // MARK:- UIImageViews Tiling -
     
     
     func placeImageViewOnRight(imageView : UIImageView, rightEdge : CGFloat) -> CGFloat {
+        
         var frame = imageView.frame
         frame.origin.x = rightEdge
         frame.origin.y = CGRectGetHeight(self.containerView.bounds) - frame.size.height
@@ -85,6 +100,7 @@ class InfiniteScrollView: UIScrollView {
     }
     
     func placeImageViewOnLeft(imageView : UIImageView, leftEdge : CGFloat) -> CGFloat {
+        
         var frame = imageView.frame
         frame.origin.x = leftEdge - CGRectGetWidth(frame)
         frame.origin.y = CGRectGetHeight(self.containerView.bounds) - frame.size.height

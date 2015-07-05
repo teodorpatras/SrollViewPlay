@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeaderZoomScrollView: UIScrollView {
+class HeaderZoomScrollView: UIScrollView, UIScrollViewDelegate {
 
     
     // MARK:- Subviews -
@@ -18,8 +18,8 @@ class HeaderZoomScrollView: UIScrollView {
     
     // MARK:- Constants -
     
-    let topMargin : CGFloat = -64
-    let rocketsTopMargin : CGFloat = -54
+    let topMargin : CGFloat = 0
+    let rocketsTopMargin : CGFloat = 10
     let rocketsRightMargin : CGFloat = 20
     
     // MARK:- Helper variables -
@@ -46,6 +46,10 @@ class HeaderZoomScrollView: UIScrollView {
         
         self.addSubview(starsView)
         self.addSubview(rocketsView)
+        
+        self.delegate = self
+        self.minimumZoomScale = 1.0
+        self.maximumZoomScale = 8
     }
 
     // MARK:- Layout -
@@ -58,13 +62,30 @@ class HeaderZoomScrollView: UIScrollView {
     override func layoutSubviews() {
         super.layoutSubviews()
     
-        let maxVisibleX = CGRectGetMaxX(self.bounds)
-        let minVisibleX = CGRectGetMinX(self.bounds)
+        let visibleBounds = self.convertRect(self.bounds, toView: self.starsView)
         
-        let moonCenterX = maxVisibleX - rocketsRightMargin - CGRectGetWidth(rocketsView.frame) / 2
+        /*
+        let maxVisibleX = CGRectGetMaxX(visibleBounds)
+        let minVisibleX = CGRectGetMinX(visibleBounds)
+        */
+        
+        let moonCenterX = CGRectGetMaxX(self.bounds) - rocketsRightMargin - CGRectGetWidth(rocketsView.frame) / 2
         let moonCenterY = self.contentOffset.y + 10 + CGRectGetHeight(rocketsView.frame) / 2
             
         rocketsView.center = CGPointMake(moonCenterX, CGRectGetHeight(rocketsView.frame) / 2 + rocketsTopMargin)
     }
     
+    // MARK:- UIScrollviewDelegate -
+    
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return starsView
+    }
+    
+    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView!, atScale scale: CGFloat) {
+        // redraw after zooming
+        
+        let s = scale * scrollView.window!.screen.scale
+        starsView.contentScaleFactor = scale
+    }
 }

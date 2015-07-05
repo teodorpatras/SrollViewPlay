@@ -8,14 +8,19 @@
 
 import UIKit
 
+func statusAndNavigationBarHeights(controller : UINavigationController) -> CGFloat{
+    return UIApplication.sharedApplication().statusBarFrame.height + controller.navigationBar.frame.size.height
+}
+
 class TableViewController: UITableViewController {
 
-    let dataSource = [["title" : "Infinite scrolling", "segue" : "showInfiniteScrollView"],["title" : "Header View & Zooming", "segue" : "showHeaderZoomController"]]
+    let dataSource = [["title" : "Infinite scrolling", "segue" : "showInfiniteScrollView"],["title" : "Header View & Zooming", "segue" : "showHeaderZoomScrollView"], ["title" : "Nested scroll views", "segue" : "showNestedScrollViews"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title =  "Overview"
+        self.navigationController?.navigationBar.translucent = false
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
