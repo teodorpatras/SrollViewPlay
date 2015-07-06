@@ -13,7 +13,7 @@ class InfiniteScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "Infinite scrolling (4 static images)"
+        self.navigationItem.title = "Infinite scrolling"
     }
 
     override func didReceiveMemoryWarning() {
